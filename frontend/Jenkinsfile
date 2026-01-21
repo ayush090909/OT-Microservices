@@ -1,4 +1,4 @@
-@Library('cicd') _
+@Library('cicd@main') _
 def cipipeline = new opstree.ci.templates.java_ci.java_ci()
 node {
   
@@ -19,7 +19,7 @@ node {
     repo_ssh_url: "https://github.com/ayush090909/OT-Microservices.git",
     repo_branch: "master",
     repo_url_type: "http",
-    jenkins_git_creds_id: "github-token",
+    jenkins_git_creds_id: "new-token",
     source_code_path: "",
 
     // Creds Scanning
