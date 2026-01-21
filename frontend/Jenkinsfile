@@ -19,7 +19,7 @@ node {
     repo_ssh_url: "https://github.com/ayush090909/OT-Microservices.git",
     repo_branch: "main",
     repo_url_type: "http",
-    jenkins_git_creds_id: "new-token",
+    jenkins_git_creds_id: "jenkins-token",
     source_code_path: "",
 
     // Creds Scanning
