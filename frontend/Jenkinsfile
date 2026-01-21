@@ -1,4 +1,4 @@
-@Library('cicd@golang') _
+@Library('cicd') _
 def cipipeline = new opstree.ci.templates.java_ci.java_ci()
 node {
   
@@ -17,7 +17,7 @@ node {
     // VCS MANAGEMENT 
     repo_https_url: "https://github.com/ayush090909/OT-Microservices.git",
     repo_ssh_url: "https://github.com/ayush090909/OT-Microservices.git",
-    repo_branch: "master",
+    repo_branch: "main",
     repo_url_type: "http",
     jenkins_git_creds_id: "new-token",
     source_code_path: "",
@@ -27,11 +27,6 @@ node {
     fail_job_if_leak_detected: false,
     gitleaks_report_format: "json",
     gitleaks_report_jenkins_publish: true,
-
-    perform_code_build: false,
-    build_tool: "",
-    pom_location: " ",
-    mvn_settings_path: "",
 
 
 
