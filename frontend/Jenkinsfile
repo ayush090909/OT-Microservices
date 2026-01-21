@@ -28,10 +28,21 @@ node {
     gitleaks_report_format: "json",
     gitleaks_report_jenkins_publish: true,
 
-    perform_code_build: true,
+    perform_code_build: false,
     build_tool: "",
     pom_location: " ",
     mvn_settings_path: "",
+
+
+
+    // Build Dockerfile
+    perform_build_dockerfile: true,
+    image_name: "lastmile",
+    dockerfile_location: "/frontend/Dockerfile",
+    dockerfile_context: "",
+    codeartifact_dependency: false,
+    codeartifact_domain: "ecomexpress",
+    codeartifact_owner: "543339517346",
 
     // Notification
     
