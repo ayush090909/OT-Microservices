@@ -36,8 +36,8 @@ node {
     dockerfile_location: "/frontend/Dockerfile",
     dockerfile_context: "",
     codeartifact_dependency: false,
-    codeartifact_domain: "ecomexpress",
-    codeartifact_owner: "543339517346",
+    codeartifact_domain: "",
+    codeartifact_owner: "",
 
 
 
