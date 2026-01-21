@@ -39,6 +39,17 @@ node {
     codeartifact_domain: "ecomexpress",
     codeartifact_owner: "543339517346",
 
+
+
+     // Publish Artifact(Docker Image)
+    artifact_publish_check: true,
+    artifact_destination_type: "ecr",
+    jenkins_aws_credentials_id: "aws-creds",
+    docker_image_name: "opstree",
+    ecr_repo_name: "opstree",
+    ecr_region: "us-east-1",
+    account_id: "384961893048",
+
     // Notification
     
     notification_enabled: false,
