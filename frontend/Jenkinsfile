@@ -35,7 +35,7 @@ node {
 
     // Notification
     
-    notification_enabled: true,
+    notification_enabled: false,
     notification_channel: "teams",
     webhook_url_creds_id: "teams_webhook"
   ])
