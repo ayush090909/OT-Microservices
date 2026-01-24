@@ -1,20 +1,16 @@
-FROM node:16.15.1
-
-MAINTAINER Opstree Solutions
-
-COPY . /app
-
-WORKDIR /app/
-
-RUN apt-get update -y && \
-    apt-get install git -y
-
-RUN npm install 
-
+# Build stage
+FROM node:18-bullseye AS build
+WORKDIR /app
+COPY package*.json ./
+RUN npm install
+COPY . .
 RUN npm run build
 
-RUN yarn global add serve
+# Runtime stage
+FROM node:18-alpine
+RUN npm install -g serve
+WORKDIR /app
+COPY --from=build /app/build ./build
 
 EXPOSE 3000
-
-ENTRYPOINT ["serve", "-s", "build"]
+CMD ["serve", "-s", "build"]
