@@ -37,6 +37,11 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
+  {
+  "scripts": {
+    "test": "jest --coverage --watchAll=false --passWithNoTests --reporters=default --reporters=jest-junit"
+  }
+},
   "browserslist": [
     ">0.2%",
     "not dead",
